@@ -31,6 +31,46 @@ public class TestParser {
     }
 
     @Test
+    public void testMultiInteger() {
+        assertTrue(doesItParse("12"));
+    }
+
+    @Test
+    public void testAddSingleIntegers() {
+        assertTrue(doesItParse("1+2"));
+    }
+
+    @Test
+    public void testAddSingleWithMultipleInteger() {
+        assertTrue(doesItParse("1+23"));
+    }
+
+    @Test
+    public void testAddMultiIntegers() {
+        assertTrue(doesItParse("12+34"));
+    }
+
+    @Test
+    public void testMinusSingleIntegers() {
+        assertTrue(doesItParse("1-2"));
+    }
+
+    @Test
+    public void testMinusSingleWithMultipleInteger() {
+        assertTrue(doesItParse("1-23"));
+    }
+
+    @Test
+    public void testMinusMultiIntegers() {
+        assertTrue(doesItParse("12-34"));
+    }
+
+    @Test
+    public void testAddWithMinus() {
+        assertTrue(doesItParse("12+34-56-78+90"));
+    }
+    
+    @Test
     public void testBigThing() {
         assertTrue(doesItParse("127+82+76-2-90"));
     }
