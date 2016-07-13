@@ -7,7 +7,7 @@ import static org.junit.Assert.fail;
 import org.junit.Test;
 
 public class TestParser {
-    public static boolean doesItParse(String input) {
+    public static boolean doesItParse(final String input) {
         return new Parser(input).parse();
     }
 
